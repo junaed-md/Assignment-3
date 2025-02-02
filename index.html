@@ -42,14 +42,14 @@
 
 <body class="sora">
     <header class="">
-        <nav class=" bg-primarybg">
+        <!-- <nav class=" bg-primarybg">
             <div class="container mx-auto px-4 py-9 flex justify-between">
-                <!-- Logo -->
+                <!-- Logo --
                 <div class="flex items-center gap-3">
                     <img src="c1-assets/logo-header.png" alt="">
                     <h3 class="text-[26px] text-primarytxt">Browse<span class="text-accent">4</span>Pets</h3>
                 </div>
-                <!-- Menu Items -->
+                <!-- Menu Items --
                 <div class="flex items-center">
                     <ul class="flex gap-8">
                         <li>
@@ -64,8 +64,40 @@
 
                     </ul>
                 </div>
-                <!-- Menu Icon -->
+                <!-- Menu Icon --
                 <div class="flex gap-3 items-center">
+                    <i class="fa-regular fa-bell text-2xl"></i>
+                    <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                    <button class="py-[10px] px-[30px] rounded-lg border-2 border-accent">Login</button>
+                    <button class="py-[10px] px-[30px] rounded-lg bg-accent">Register</button>
+                </div>
+            </div>
+        </nav>
+         -->
+         <nav class="bg-primarybg max-md:border-b max-md:border-black">
+            <div class="container mx-auto px-4 py-9 flex justify-between max-md:py-4">
+                <!-- Logo (unchanged) -->
+                <div class="flex items-center gap-3">
+                    <img src="c1-assets/logo-header.png" alt="">
+                    <h3 class="hidden md:flex text-[26px] text-primarytxt">Browse<span class="text-accent">4</span>Pets</h3>
+                </div>
+        
+                <!-- Mobile Hamburger (hidden on desktop) -->
+                <button class="hidden max-md:block">
+                    <i class="fa-solid fa-bars text-2xl text-primarytxt"></i>
+                </button>
+        
+                <!-- Original Menu Items (hidden on mobile) -->
+                <div class="max-md:hidden flex items-center">
+                    <ul class="flex gap-8">
+                        <li><a class="text-xl text-primarytxt" href="#">Find a pet</a></li>
+                        <li><a class="text-xl text-primarytxt" href="#">Breeds</a></li>
+                        <li><a class="text-xl text-primarytxt" href="#">Contact us</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Original Right Buttons (hidden on mobile) -->
+                <div class="max-md:hidden flex gap-3 items-center">
                     <i class="fa-regular fa-bell text-2xl"></i>
                     <i class="fa-solid fa-magnifying-glass text-2xl"></i>
                     <button class="py-[10px] px-[30px] rounded-lg border-2 border-accent">Login</button>
