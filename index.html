@@ -37,6 +37,26 @@
         .sora {
             font-family: "Sora", serif;
         }
+
+        @keyframes borderPulse {
+            0% {
+                border-color: rgba(255, 0, 0, 0.5);
+            }
+
+            50% {
+                border-color: rgba(0, 255, 0, 0.8);
+            }
+
+            100% {
+                border-color: rgba(255, 0, 0, 0.5);
+            }
+        }
+
+        .animate-border {
+            animation: borderPulse 2s infinite;
+            border-width: 4px;
+            border-style: solid;
+        }
     </style>
 </head>
 
@@ -74,19 +94,20 @@
             </div>
         </nav>
          -->
-         <nav class="bg-primarybg max-md:border-b max-md:border-black">
+        <nav class="bg-primarybg max-md:border-b max-md:border-black">
             <div class="container mx-auto px-4 py-9 flex justify-between max-md:py-4">
                 <!-- Logo (unchanged) -->
                 <div class="flex items-center gap-3">
                     <img src="c1-assets/logo-header.png" alt="">
-                    <h3 class="hidden md:flex text-[26px] text-primarytxt">Browse<span class="text-accent">4</span>Pets</h3>
+                    <h3 class="hidden md:flex text-[26px] text-primarytxt">Browse<span class="text-accent">4</span>Pets
+                    </h3>
                 </div>
-        
+
                 <!-- Mobile Hamburger (hidden on desktop) -->
                 <button class="hidden max-md:block">
                     <i class="fa-solid fa-bars text-2xl text-primarytxt"></i>
                 </button>
-        
+
                 <!-- Original Menu Items (hidden on mobile) -->
                 <div class="max-md:hidden flex items-center">
                     <ul class="flex gap-8">
@@ -95,7 +116,7 @@
                         <li><a class="text-xl text-primarytxt" href="#">Contact us</a></li>
                     </ul>
                 </div>
-        
+
                 <!-- Original Right Buttons (hidden on mobile) -->
                 <div class="max-md:hidden flex gap-3 items-center">
                     <i class="fa-regular fa-bell text-2xl"></i>
@@ -109,8 +130,13 @@
         <section class="container mx-auto px-4 py-9 ">
             <div class="min-h-[450px] md:min-h-[700px] bg-contain bg-no-repeat bg-bottom md:bg-bottom-right"
                 style="background-image: url('c1-assets/cat-big.png');">
-                <h1 class="text-[30px] md:text-[56px] adlam text-primarytxt md:leading-[70px]">Pamper Your Pet, <br>
-                    Because They Deserve <br> the Bes</h1>
+                <h1
+                    class="text-[30px] md:text-[56px] adlam text-primarytxt md:leading-[70px] relative inline-block border-animation">
+                    Pamper Your Pet, <br>
+                    Because They Deserve <br> the Best
+                    <span class="absolute inset-0 border-4 border-primary rounded-lg animate-border"></span>
+                </h1>
+
                 <p class="text-[20px] text-primarytxt mt-4 mb-6">Discover a world of treats, toys, and essentials
                     handpicked for <br> your furry friends. Shop now and make tails wag with joy!</p>
                 <button class="py-[10px] px-[30px] rounded-lg bg-accent text-[20px] text-primarytxt">Find a pet</button>
@@ -350,7 +376,7 @@
                     <input class="py-2 p-3 md:p-5 rounded-lg min-w-[310px] md:min-w-[470px]" type="email" name="" id=""
                         placeholder="Enter email....">
                     <br> <br>
-                    <button class="py-[10px] px-[30px] rounded-lg bg-accent text-black">Subscribe</button>
+                    <button class=" mb-5 py-[10px] px-[30px] rounded-lg bg-accent text-black">Subscribe</button>
                 </div>
             </div>
             </div>
@@ -361,12 +387,14 @@
 
                 <div class="flex flex-col gap-9 md:flex-row justify-between">
                     <div>
-                <!-- Logo -->
+                        <!-- Logo -->
                         <div class="flex items-center gap-3">
                             <img src="c1-assets/logo-footer.png" alt="">
-                            <h3 class="text-xl md:text-[26px]  text-primarytxt">Browse<span class="text-accent">4</span>Pets</h3>
+                            <h3 class="text-xl md:text-[26px]  text-primarytxt">Browse<span
+                                    class="text-accent">4</span>Pets</h3>
                         </div>
-                        <p class="md:max-w-[350px] mt-4 md:mt-6">Discover a world of treats, toys, and <br> essentials handpicked for your furry friends</p>
+                        <p class="md:max-w-[350px] mt-4 md:mt-6">Discover a world of treats, toys, and <br> essentials
+                            handpicked for your furry friends</p>
                     </div>
                     <div class="flex items-center ">
                         <ul class="flex flex-col gap-5 md:gap-8">
@@ -379,7 +407,7 @@
                             <li>
                                 <a class="text-xl text-primarytxt" href="#">Contact us</a>
                             </li>
-    
+
                         </ul>
                     </div>
 
